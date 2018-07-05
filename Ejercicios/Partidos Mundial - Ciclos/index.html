@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="aplicacion">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <script src="LIBRERIAS/ANGULAR/angular.min.js"></script>
+    <script src="SCRIPTS/app.js"></script>
+  </head>
+
+  <body >
+    <div class="princi" ng-controller="principalCtrl">
+        <h1 class="titulo">MUNDIAL RUSIA 2018</h1>
+        
+      <div class="local">
+        <ul ng-repeat="paises in pais">
+            <li ng-if="$index%2==0" > {{paises}} </li>  </ul>
+          <ul ng-repeat="bandera in codigo">  </ul>
+          <li ng-if="$index%2==0" > <img src="http://www.countryflags.io/{{bandera}}/flat/64.png"> </li>
+        
+      </div>
+      <div class="visita">
+        <ul ng-repeat="paises in pais">
+          <li ng-if="$index%2==1"> {{paises}}     </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    
+  </body>
+
+</html>
